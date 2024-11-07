@@ -20,6 +20,6 @@ So this mod does change to if horizontal velocity of player/arrow is 16 block/ti
 Then server will not try to generate new chunks and it's fixes the oneshot lag.
 
 Because of this, it does have different behaviors that compares with vanilla and may have the following side effects:
-- Server side player doesn't get vanilla effect from velocity what have 16+ blocks/tick speed. it will have so much slower velocity(like 1 block/tick speed).
+- Server side player doesn't get vanilla effect from velocity what have 16+ blocks/tick speed. it will have so much slower velocity(around 1 block/tick speed).
 - Player collision check might not work properly with very fast velocity, could be pass through the wall, or something like that.
 - Arrow collision check might not work properly with very fast velocity, could be pass through the wall and entity, or something like that.
