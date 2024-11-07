@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "id": "oneshotlagfix",
+  "version": "${version}",
+  "name": "OneShotLagFix",
+  "description": "",
+  "authors": [
+    "RedLime"
+  ],
+  "contact": {
+    "repo": "https://github.com/RedLime/OneShotLagFix"
+  },
+  "license": "GPL-3.0",
+  "environment": "*",
+  "entrypoints": {
+  },
+  "mixins": [
+    "oneshotlagfix.mixins.json"
+  ],
+  "depends": {
+    "minecraft": ">=1.16-",
+    "fabricloader": ">=0.15"
+  }
+}

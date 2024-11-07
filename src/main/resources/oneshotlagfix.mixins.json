@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.redlimerl.oneshotfix.mixins",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [
+    "MixinPersistentProjectileEntity",
+    "MixinServerPlayerEntity"
+  ],
+  "client": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
