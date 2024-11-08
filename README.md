@@ -16,7 +16,7 @@ Lastly, arrow from bow also have SAME velocity as player and same chunk generati
 
 ## How to fix it?
 So this mod does change to if horizontal velocity of player/arrow is 16 block/tick or faster, 
-it will modify velocity to not check to outside of render distance to player/arrow while checking collision or ray-casting.
+it will modify velocity to not check to outside of render distance to player/arrow while checking collision or ray-casting when a player/arrow is in the end dimension and dragon is alive.
 
 Then server will not try to generate new chunks and it's fixes the oneshot lag.
 
