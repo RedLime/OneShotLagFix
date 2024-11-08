@@ -15,11 +15,12 @@ sometimes player could have 1000+ blocks/tick velocity, then server will try to 
 Lastly, arrow from bow also have SAME velocity as player and same chunk generation behavior (because of entity/block hit check) at this point.
 
 ## How to fix it?
-So this mod does change to if horizontal velocity of player/arrow is 16 block/tick or faster, it will modify velocity to around 1 blocks/tick but only while checking collision or ray-casting.
+So this mod does change to if horizontal velocity of player/arrow is 16 block/tick or faster, 
+it will modify velocity to not check to outside of render distance to player/arrow while checking collision or ray-casting.
 
 Then server will not try to generate new chunks and it's fixes the oneshot lag.
 
 Because of this, it does have different behaviors that compares with vanilla and may have the following side effects:
-- Server side player doesn't get vanilla effect from velocity what have 16+ blocks/tick speed. it will have so much slower velocity actually like around 1 block/tick speed. but still velocity value of player is same as vanilla.
-- Player collision check might not work properly with very fast velocity, could be pass through the wall, or something like that.
-- Arrow collision check might not work properly with very fast velocity, could be pass through the wall and entity, or something like that.
+- Server side player doesn't get vanilla effect from velocity what have 16+ blocks/tick speed. it will not move to outside of render distance. but still velocity value of player is same as vanilla.
+- Player collision check might not work properly with very fast velocity on unloaded chunks, could be pass through the wall, or something like that.
+- Arrow collision check might not work properly with very fast velocity on unloaded chunks, could be pass through the wall and entity, or something like that.
