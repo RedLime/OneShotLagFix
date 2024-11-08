@@ -1,5 +1,6 @@
 package com.redlimerl.oneshotfix;
 
+import com.redlimerl.oneshotfix.mixins.EnderDragonFightAccessor;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.math.Box;
@@ -10,7 +11,7 @@ import java.util.Optional;
 
 public class OneShotFix {
     public static boolean shouldCheckVelocityInUnloadedChunk(ServerWorld world, Vec3d vec3d) {
-        return world.getEnderDragonFight() != null && !world.getEnderDragonFight().hasPreviouslyKilled() && new Vec3d(vec3d.getX(), 0, vec3d.getZ()).length() > 16;
+        return world.getEnderDragonFight() != null && !((EnderDragonFightAccessor) world.getEnderDragonFight()).hasDragonKilled() && new Vec3d(vec3d.getX(), 0, vec3d.getZ()).length() > 16;
     }
 
     public static Vec3d maximumLoadedPosVelocity(ServerWorld world, Vec3d pos, Vec3d velocity) {

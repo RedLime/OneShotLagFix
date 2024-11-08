@@ -4,6 +4,7 @@
   "package": "com.redlimerl.oneshotfix.mixins",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
+    "EnderDragonFightAccessor",
     "MixinPersistentProjectileEntity",
     "MixinServerPlayerEntity"
   ],
